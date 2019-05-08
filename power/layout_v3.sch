@@ -1,0 +1,233 @@
+EESchema Schematic File Version 4
+LIBS:layout_v3-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Linear:MCP1700-3302E_SOT23 PU1
+U 1 1 5CD34147
+P 2500 1500
+F 0 "PU1" H 2500 1742 50  0000 C CNN
+F 1 "MCP1700-3302E_SOT23" H 2500 1651 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2500 1725 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf" H 2500 1500 50  0001 C CNN
+	1    2500 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5CD3558F
+P 2500 2000
+F 0 "#PWR0101" H 2500 1750 50  0001 C CNN
+F 1 "GND" H 2505 1827 50  0000 C CNN
+F 2 "" H 2500 2000 50  0001 C CNN
+F 3 "" H 2500 2000 50  0001 C CNN
+	1    2500 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0102
+U 1 1 5CD359D4
+P 3150 1200
+F 0 "#PWR0102" H 3150 1050 50  0001 C CNN
+F 1 "VDD" H 3167 1373 50  0000 C CNN
+F 2 "" H 3150 1200 50  0001 C CNN
+F 3 "" H 3150 1200 50  0001 C CNN
+	1    3150 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 1500 3000 1500
+Wire Wire Line
+	3150 1500 3150 1200
+Wire Wire Line
+	2500 1800 2500 1900
+Text GLabel 1350 1500 0    50   Input ~ 0
+VREG_IN
+Wire Wire Line
+	2200 1500 2000 1500
+$Comp
+L Device:C_Small PC1
+U 1 1 5CD362D8
+P 2000 1700
+F 0 "PC1" H 2092 1746 50  0000 L CNN
+F 1 "1uF" H 2092 1655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2000 1700 50  0001 C CNN
+F 3 "~" H 2000 1700 50  0001 C CNN
+	1    2000 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small PC2
+U 1 1 5CD36A53
+P 3000 1700
+F 0 "PC2" H 3092 1746 50  0000 L CNN
+F 1 "1uF" H 3092 1655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3000 1700 50  0001 C CNN
+F 3 "~" H 3000 1700 50  0001 C CNN
+	1    3000 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 1600 2000 1500
+Wire Wire Line
+	3000 1600 3000 1500
+Connection ~ 3000 1500
+Wire Wire Line
+	3000 1500 3150 1500
+Wire Wire Line
+	3000 1800 3000 1900
+Wire Wire Line
+	3000 1900 2500 1900
+Connection ~ 2500 1900
+Wire Wire Line
+	2500 1900 2500 2000
+Wire Wire Line
+	2500 1900 2000 1900
+Wire Wire Line
+	2000 1900 2000 1800
+Text GLabel 1450 1100 1    50   Input ~ 0
+VBUS
+Text GLabel 1700 1100 1    50   Input ~ 0
+VBAT
+$Comp
+L Device:D_Schottky_Small PD2
+U 1 1 5CD38AA0
+P 1450 1300
+F 0 "PD2" V 1496 1232 50  0000 R CNN
+F 1 "D" V 1405 1232 50  0000 R CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1450 1300 50  0001 C CNN
+F 3 "~" V 1450 1300 50  0001 C CNN
+	1    1450 1300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D_Schottky_Small PD3
+U 1 1 5CD39A0C
+P 1700 1300
+F 0 "PD3" V 1746 1232 50  0000 R CNN
+F 1 "D" V 1655 1232 50  0000 R CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1700 1300 50  0001 C CNN
+F 3 "~" V 1700 1300 50  0001 C CNN
+	1    1700 1300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1450 1100 1450 1200
+Wire Wire Line
+	1700 1100 1700 1200
+Wire Wire Line
+	1700 1400 1700 1500
+Connection ~ 1700 1500
+Wire Wire Line
+	1350 1500 1450 1500
+Wire Wire Line
+	1450 1400 1450 1500
+Connection ~ 1450 1500
+Wire Wire Line
+	1450 1500 1700 1500
+Wire Wire Line
+	1700 1500 2000 1500
+Connection ~ 2000 1500
+$Comp
+L Device:D_Schottky_Small PD1
+U 1 1 5CD3CA7E
+P 4850 1100
+F 0 "PD1" V 4896 1032 50  0000 R CNN
+F 1 "D" V 4805 1032 50  0000 R CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4850 1100 50  0001 C CNN
+F 3 "~" V 4850 1100 50  0001 C CNN
+	1    4850 1100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4950 1100 5050 1100
+Text GLabel 5050 1100 2    50   Input ~ 0
+5V
+$Comp
+L Connector:USB_B_Mini PJ1
+U 1 1 5CD3EA32
+P 4200 1300
+F 0 "PJ1" H 4257 1767 50  0000 C CNN
+F 1 "USB_B_Mini" H 4257 1676 50  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_Wuerth_629105150521_CircularHoles" H 4350 1250 50  0001 C CNN
+F 3 "~" H 4350 1250 50  0001 C CNN
+	1    4200 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VBUS #PWR0103
+U 1 1 5CD404F7
+P 4750 800
+F 0 "#PWR0103" H 4750 650 50  0001 C CNN
+F 1 "VBUS" H 4765 973 50  0000 C CNN
+F 2 "" H 4750 800 50  0001 C CNN
+F 3 "" H 4750 800 50  0001 C CNN
+	1    4750 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 1100 4750 1100
+Wire Wire Line
+	4750 1100 4750 800 
+Wire Wire Line
+	4100 1700 4100 1900
+Wire Wire Line
+	4100 1900 3000 1900
+Connection ~ 3000 1900
+Wire Wire Line
+	4200 1700 4200 1900
+Wire Wire Line
+	4200 1900 4100 1900
+Connection ~ 4100 1900
+Connection ~ 4750 1100
+Text GLabel 6000 1350 2    50   Input ~ 0
+USB_D+
+Text GLabel 6000 1650 2    50   Input ~ 0
+USB_D-
+Wire Wire Line
+	4750 1300 4500 1300
+Wire Wire Line
+	4500 1400 4750 1400
+$Comp
+L Jumper:SolderJumper_2_Bridged PSJ1
+U 1 1 5CD490AD
+P 5850 1350
+F 0 "PSJ1" H 5850 1555 50  0000 C CNN
+F 1 "D+" H 5850 1464 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 5850 1350 50  0001 C CNN
+F 3 "~" H 5850 1350 50  0001 C CNN
+	1    5850 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged PSJ2
+U 1 1 5CD49D12
+P 5850 1650
+F 0 "PSJ2" H 5850 1855 50  0000 C CNN
+F 1 "D-" H 5850 1764 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 5850 1650 50  0001 C CNN
+F 3 "~" H 5850 1650 50  0001 C CNN
+	1    5850 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 1350 4750 1350
+Wire Wire Line
+	4750 1350 4750 1300
+Wire Wire Line
+	4750 1400 4750 1650
+Wire Wire Line
+	4750 1650 5700 1650
+$EndSCHEMATC
