@@ -154,10 +154,6 @@ F 3 "" H 4750 1650 50  0001 C CNN
 	1    4750 1650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4450 1500 4350 1500
-Wire Wire Line
-	4350 1500 4350 1150
 $Comp
 L Device:R_Small DR1
 U 1 1 5CD372D0
@@ -176,7 +172,6 @@ Wire Wire Line
 	4350 1150 4000 1150
 Wire Wire Line
 	4000 1150 4000 1100
-Connection ~ 4350 1150
 $Comp
 L power:VDD #PWR0104
 U 1 1 5CD382A5
@@ -195,4 +190,19 @@ Text GLabel 3900 1150 0    50   Input ~ 0
 Wire Wire Line
 	3900 1150 4000 1150
 Connection ~ 4000 1150
+$Comp
+L Jumper:SolderJumper_2_Bridged DJP1
+U 1 1 5CD6F578
+P 4150 1500
+F 0 "DJP1" H 4150 1705 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 4150 1614 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 4150 1500 50  0001 C CNN
+F 3 "~" H 4150 1500 50  0001 C CNN
+	1    4150 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 1500 4450 1500
+Wire Wire Line
+	4000 1500 4000 1150
 $EndSCHEMATC

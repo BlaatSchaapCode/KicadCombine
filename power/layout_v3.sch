@@ -230,4 +230,23 @@ Wire Wire Line
 	4750 1400 4750 1650
 Wire Wire Line
 	4750 1650 5700 1650
+$Comp
+L Jumper:SolderJumper_2_Open PSJ3
+U 1 1 5CD68ED6
+P 5850 2000
+F 0 "PSJ3" H 5850 2205 50  0000 C CNN
+F 1 "ID" H 5850 2114 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 5850 2000 50  0001 C CNN
+F 3 "~" H 5850 2000 50  0001 C CNN
+	1    5850 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 2000 4600 2000
+Wire Wire Line
+	4600 2000 4600 1500
+Wire Wire Line
+	4600 1500 4500 1500
+Text GLabel 6000 2000 2    50   Input ~ 0
+USB_ID
 $EndSCHEMATC
